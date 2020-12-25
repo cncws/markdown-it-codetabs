@@ -1,0 +1,51 @@
+.code-tabs {
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 3px;
+    pre, input {
+        display: none;
+    }
+    input:checked + pre {
+        display: block;
+    }
+    label {
+        color: rgba(191, 191, 191, 1);
+    }
+    input:checked + label {
+        color: rgba(38, 38, 38, 1);
+    }
+    ul {
+        width: 100%;
+        height: 38px;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: auto;
+        user-select: none;
+        border-bottom: 1px solid rgb(240, 240, 240);
+    }
+    li {
+        list-style: none;
+        display: inline-block;
+        position: relative;
+    }
+    label {
+        cursor: pointer;
+        user-select: none;
+        display: inline-block;
+        padding: 8px 5px;
+        margin: 5px;
+        font-size: 14px;
+        line-height: 0.8;
+    }
+    li ~ li::before {
+        content: "";
+        height: 12px;
+        width: 1px;
+        background: rgba(191, 191, 191, 1);
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "markdown-it-codetabs",
+  "version": "1.0.3",
+  "description": "Show your code blocks in different tabs.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cncws/markdown-it-codetabs.git"
+  },
+  "keywords": [
+    "markdown-it",
+    "markdown-it-plugin",
+    "tabs"
+  ],
+  "author": "cncws <chenws2013@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cncws/markdown-it-codetabs/issues"
+  },
+  "homepage": "https://github.com/cncws/markdown-it-codetabs#readme",
+  "devDependencies": {
+    "markdown-it": "^12.0.4"
+  }
+}
