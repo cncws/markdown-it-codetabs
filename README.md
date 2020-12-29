@@ -10,49 +10,27 @@ npm install markdown-it-codetabs --save
 
 ## Use
 
-```js
-var md = require('markdown-it')()
-            .use(require('markdown-it-codetabs'));
-
-md.render(markdownContent);
-// Continuous code block with the same
-// group markder (`[marker]`) will rendered to a tab.
-```
-
-## Example
-
-1. Normal code block:
-
-    ~~~md
-    ```python
-    print("hello")
-    ```
+1. Render your file:
 
     ```js
-    console.log("hello");
-    ```
-    ~~~
-
-2. Rendered to one block with two tabs (the tab name is language name):
-
-    ~~~md
-    ```python []
-    print("hello")
+    var md = require('markdown-it')()
+                .use(require('markdown-it-codetabs'));
+    // `group` and `tab` can only contain ASCII based characters.
+    md.render('```js [group:tab]\nconsole.log("hello");\n```');
     ```
 
-    ```js []
-    console.log("hello");
-    ```
-    ~~~
+2. Import your own styles, you can start from [codetabs.scss](https://github.com/cncws/markdown-it-codetabs/blob/main/assets/codetabs.scss).
 
-3. Rendered to two blocks with one tab separately (the content in square brackets doesn't matter as long as they are different):
+## MD Example
 
-    ~~~md
-    ```python [1]
-    print("hello")
-    ```
+~~~md
+```js [g1:JavaScript]
+console.log("hello");
+```
 
-    ```js [2]
-    console.log("hello");
-    ```
-    ~~~
+```py [g1:Python3]
+print("hello")
+```
+~~~
+
+**Notice:** The space between two code blocks can't have anything except empty string.
