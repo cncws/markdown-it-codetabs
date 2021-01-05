@@ -15,7 +15,7 @@ npm install markdown-it-codetabs --save
     ```js
     var md = require('markdown-it')()
                 .use(require('markdown-it-codetabs'));
-    // `group` and `tab` can only contain ASCII based characters.
+    // `group` and `tab` can only contain characters in [A-Za-z0-9_].
     md.render('```js [group:tab]\nconsole.log("hello");\n```');
     ```
 
@@ -33,4 +33,4 @@ print("hello")
 ```
 ~~~
 
-**Notice:** The space between two code blocks can't have anything except empty string.
+**Notice:** DON'T add anything except white space between two code blocks. 

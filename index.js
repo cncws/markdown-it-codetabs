@@ -6,7 +6,7 @@ module.exports = function (md, opts) {
     var defaultRender = md.renderer.rules.fence,
         unescapeAll = md.utils.unescapeAll,
         // [group:tab], :tab is optional
-        re = /\[(\w*)(?::(\w*))?\]/;
+        re = /\[(\w*)(?::([\w ]*))?\]/;
 
     function getInfo(token) {
         return token.info ? unescapeAll(token.info).trim() : '';
